@@ -1,12 +1,28 @@
-.container {
+/* Reset margin and padding for body and html */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General body styles */
+body,
+html {
+  height: 100%;
   width: 100%;
+}
+
+.container {
+  width: 100vw;
   height: 100vh;
   background-color: #ffd700;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  overflow: hidden; /* Prevent scrolling */
 }
 
 .main {
@@ -20,11 +36,12 @@
   background-color: #4a4a4a;
   padding: 20px;
   border-radius: 50px;
-  font-size: 50px;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 500;
   color: #fff275;
-  width: 400px;
-  height: 400px;
+  gap: 15px;
+  width: 220px;
+  height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,12 +58,12 @@
 }
 
 .phone {
-  font-size: 70px;
+  font-size: 55px;
   font-weight: bolder;
 }
 
 .deliveryText {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 600;
 }
 
@@ -56,6 +73,7 @@
   color: #fff;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
   .main {
     flex-direction: column;
